@@ -7,6 +7,8 @@ class Hotel:
         self.df_string = self.df.to_string(index=False)
         print(self.df_string)
         self.hotel_id_choice = input("\nEnter the ID of Hotel you want to book: ")
+        self.hotel_name = ""
+        self.hotel_city = ""
 
     def check_availability(self):
         while True:
@@ -19,7 +21,7 @@ class Hotel:
                 else:
                     return False
             else:
-                print("\nHotel not in list, please renter")
+                print("\nHotel not in list, please re-enter")
                 print(self.df_string)
                 self.hotel_id_choice = input("\nEnter the ID of Hotel you want to book again: ")
 
